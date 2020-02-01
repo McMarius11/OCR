@@ -9,6 +9,8 @@ read -p "Wie viele Seiten hat deine PDF? " x
 echo "Wo ist die PDF gespeichert?"
 echo "Bitte zieh die PDF Datei in dieses Terminal und drücke Enter"
 read -p "" folder
+mkdir $name
+cd $name
 while (( $x >= $y ))
 do
     convert -density 300 $folder[$y] -quality 90 $name$y.png
