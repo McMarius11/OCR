@@ -1,0 +1,18 @@
+#!/bin/bash
+x=272
+y=0
+folder=
+name=
+read -p "Wie soll deine PNG Dateien heißen? " name
+read -p "Wie viele Seiten hat deine PDF? " x
+echo ""
+echo "Wo ist die PDF gespeichert?"
+echo "Bitte zieh die PDF Datei in dieses Terminal und drücke Enter"
+read -p "" folder
+while (( $x >= $y ))
+do
+    convert -density 300 $folder[$y] -quality 90 $name$y.png
+    echo "converted $y"
+    ((y++))
+  
+done 
