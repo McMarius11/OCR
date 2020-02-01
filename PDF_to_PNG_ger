@@ -5,7 +5,7 @@ folder=
 name=
 read -p "Wie soll deine PNG Dateien heißen? " name
 read -p "Wie viele Seiten hat deine PDF? " x
-echo ""
+((x--))
 echo "Wo ist die PDF gespeichert?"
 echo "Bitte zieh die PDF Datei in dieses Terminal und drücke Enter"
 read -p "" folder
