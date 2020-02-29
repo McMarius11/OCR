@@ -1,0 +1,16 @@
+#!/bin/bash
+x=272
+y=0
+folder=
+name=
+read -p "Wie lautet der Name deiner PNG Dateien? " name
+read -p "Wie viele Seiten hat deine PDF? " x
+((x--))
+while (( $x >= $y ))
+do
+    tesseract $name$y.png output -l Fraktur_50000000.502_198857+1
+    cat output.txt >> ergebnis.txt
+    echo "converted $y"
+    ((y++))
+  
+done 
