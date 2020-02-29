@@ -3,7 +3,7 @@ x=272
 y=0
 folder=
 name=
-read -p "Wie soll deine PNG Dateien heißen? " name
+read -p "Wie heißt deine vorhandene PDF Datei? " name
 read -p "Wie viele Seiten hat deine PDF? " x
 ((x--))
 echo "Wo ist die PDF gespeichert?"
