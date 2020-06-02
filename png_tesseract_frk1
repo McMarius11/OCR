@@ -8,7 +8,7 @@ read -p "Wie viele Seiten hat deine PDF? " x
 ((x--))
 while (( $x >= $y ))
 do
-    tesseract $name$y.png output -l Fraktur_50000000.502_198857+1
+    tesseract $name$y.png output -l FrakturONB0.47_364172+Fraktur_50000000.502_198857
     cat output.txt >> ergebnis.txt
     echo "converted $y"
     ((y++))
